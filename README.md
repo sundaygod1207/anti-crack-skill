@@ -1,6 +1,6 @@
 # Anti-Crack：软件防破解安全审计技能
 
-一个 Claude Code 技能，从攻击者视角对你的客户端软件做全维度安全审计。7大通用维度 × 9个平台专项，找到那些"改一行代码就绕过"的漏洞。
+一套软件安全审计提示词，`SKILL.md` 丢给任何 AI Agent 都能跑。从攻击者视角对客户端软件做 7大通用维度 × 9个平台专项 的全量审计，找出那些"改一行代码就绕过"的漏洞。没有 AI 也能当手动检查清单用。
 
 ## 它能查什么
 
@@ -16,44 +16,31 @@
 
 **加上 9 个平台专项**：Electron / iOS / Android / Flutter & RN / Go & Rust & C++ / .NET & C# / CLI 工具 / 游戏 / 联网通信 & 服务端配合
 
-## 安装
+## 使用方式
 
-### 前提
+`SKILL.md` 就是一套完整的审计提示词，和 AI Agent 无关。三种用法：
 
-- 已安装 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)（Anthropic 官方 CLI）
+### 方式一：任何 AI Agent（通用）
 
-### 步骤
+直接把 `SKILL.md` 的内容粘贴给 ChatGPT、Claude、OpenClaw、Codex、Cursor 等任意 AI，然后：
+
+> "按照上面的审计流程，检查我项目 `~/my-app/` 的安全漏洞"
+
+AI 会按提示词里定义的 7+9 维度逐文件扫描。
+
+### 方式二：Claude Code（原生技能）
 
 ```bash
-# 1. 克隆仓库
 git clone https://github.com/sundaygod1207/anti-crack-skill.git
-
-# 2. 把 SKILL.md 放到 Claude Code 的 skills 目录
 mkdir -p ~/.claude/skills/anti-crack
 cp anti-crack-skill/SKILL.md ~/.claude/skills/anti-crack/
 ```
 
-或者直接下载 `SKILL.md`，放到 `~/.claude/skills/anti-crack/` 目录下。
+然后在 Claude Code 中直接说"安全审计"即可自动加载。
 
-## 使用
+### 方式三：人工检查清单
 
-在 Claude Code 中输入以下任意关键词即可触发审计：
-
-```
-检查安全
-安全审计
-查漏洞
-防破解
-加固
-```
-
-然后告诉 Claude Code 你要审计哪个项目的哪个目录，它会逐文件扫描并输出三层报告：
-
-```
-✅ 已安全    — 通过的检查项
-🔴 必须修复  — 严重漏洞 + 攻击方式 + 修复建议
-🟡 建议加固  — 中等风险项 + 优先级排序
-```
+没有 AI 时，打开 `SKILL.md`，按里面的检查项逐条对照你的代码审查。
 
 ## 核心哲学
 
