@@ -74,6 +74,22 @@ cp anti-crack-skill/SKILL.md ~/.claude/skills/anti-crack/
 | CLI/npm | `npm install` = 源码到手 | 价值在后端 API |
 | Unity | Mono DLL → dnSpy 还原源码 | IL2CPP + 重要逻辑服务端 |
 
+## 联系作者
+
+📱 **微信 / 手机**：17600560007
+
+## 付费咨询服务
+
+我提供 AI Agent 全方面的付费咨询，包括但不限于：
+
+- 🤖 **AI Agent 开发**：Claude Code / OpenClaw / Codex 等平台的智能体定制
+- 🔧 **AI 软件开发**：帮你用 AI Agent 自动化业务流程、搭建内部工具
+- 🛡️ **软件安全审计**：用本仓库的 anti-crack 方法论对你的产品做深度审计
+- 💡 **技术咨询**：AI Agent 选型、架构设计、Claude Code 技能编写
+- 🏗️ **定制开发**：根据你的需求，从零构建专属 AI 软件或智能体
+
+有需要直接微信联系，备注来意。
+
 ## License
 
 MIT
